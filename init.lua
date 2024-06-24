@@ -416,6 +416,18 @@ require('lazy').setup({
     end,
   },
 
+  -- yallreadyknowwhoitis
+  'github/copilot.vim',
+
+  { -- shows function as you're typing
+    'ray-x/lsp_signature.nvim',
+    event = 'VeryLazy',
+    opts = {},
+    config = function(_, opts)
+      require('lsp_signature').setup(opts)
+    end,
+  },
+
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
